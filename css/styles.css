@@ -132,3 +132,17 @@ h1::before {
   border-radius: 4px;
   transition-duration: 0s;
 }
+
+.credits,
+.credits a {
+  font-size: 0.875em;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  color: #fdfdfd5d;
+  transition: all 150ms ease-in-out;
+}
+
+.credits a:hover {
+  color: #fdfdfd;
+  font-size: 0.9em;
+}
