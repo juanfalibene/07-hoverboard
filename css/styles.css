@@ -5,7 +5,7 @@
 }
 
 :root {
-  --ls05: -1px;
+  --ls5: 1px;
   --fs-ms: 1.5em;
 }
 
@@ -26,24 +26,84 @@ body {
 }
 
 h1 {
-  font-size: var(--fs-ms);
+  font-size: 100%;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: var(--ls05);
-  color: #fdfdfddd;
+  letter-spacing: var(--ls5);
+  color: transparent;
+  line-height: 100%;
+  cursor: none;
+}
+
+h1::before {
+  content: "HOVERBOARD";
+  font-size: 100%;
+  line-height: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
   -webkit-background-clip: text !important;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  background: linear-gradient(
-    -90deg,
-    #c6ca66 0%,
-    #7873c3 20%,
-    #26d29b 40%,
-    #163964 60%,
-    #d97b8b 80%,
-    #dfe688 100%
-  );
-  cursor: none;
+  background-color: #111111;
+  position: relative;
+  margin-left: 0;
+  margin-bottom: -1em;
+  opacity: 0.9;
+  box-shadow: inset 0 0 10px #111111;
+  animation: type 500ms ease-in-out forwards;
+}
+
+@keyframes type {
+  10% {
+    background: linear-gradient(-90deg, #111111 90%, #dfe688 100%);
+  }
+  20% {
+    background: linear-gradient(-90deg, #111111 80%, #d97b8b 80%, #dfe688 100%);
+  }
+  40% {
+    background: linear-gradient(
+      -90deg,
+      #111111 60%,
+      #163964 60%,
+      #d97b8b 80%,
+      #dfe688 100%
+    );
+  }
+  60% {
+    background: linear-gradient(
+      -90deg,
+      #111111 40%,
+      #26d29b 40%,
+      #163964 60%,
+      #d97b8b 80%,
+      #dfe688 100%
+    );
+  }
+  80% {
+    background: linear-gradient(
+      -90deg,
+      #111111 0%,
+      #7873c3 20%,
+      #26d29b 40%,
+      #163964 60%,
+      #d97b8b 80%,
+      #dfe688 100%
+    );
+  }
+  100% {
+    background: linear-gradient(
+      -90deg,
+      #c6ca66 0%,
+      #7873c3 20%,
+      #26d29b 40%,
+      #163964 60%,
+      #d97b8b 80%,
+      #dfe688 100%
+    );
+    box-shadow: none;
+    opacity: 1;
+  }
 }
 
 .container {
