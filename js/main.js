@@ -1,5 +1,12 @@
 const container = document.getElementById("container");
-const colors = ["#D97B8B", "#163964", "#26D29B", "#7873C3", "#C6CA66"];
+const colors = [
+  "#DFE688",
+  "#D97B8B",
+  "#163964",
+  "#26D29B",
+  "#7873C3",
+  "#C6CA66",
+];
 const SQUARES = 500;
 const bgColor = "#1d1d1d";
 const boxShadow = "0 0 2px #000000";
