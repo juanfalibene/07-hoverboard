@@ -30,7 +30,20 @@ h1 {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: var(--ls05);
-  color: #fdfdfd;
+  color: #fdfdfddd;
+  -webkit-background-clip: text !important;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    -90deg,
+    #c6ca66 0%,
+    #7873c3 20%,
+    #26d29b 40%,
+    #163964 60%,
+    #d97b8b 80%,
+    #dfe688 100%
+  );
+  cursor: none;
 }
 
 .container {
@@ -48,11 +61,14 @@ h1 {
   box-shadow: 0 0 2px #000000;
   width: 16px;
   height: 16px;
+  border-radius: 2px;
   margin: 2px;
   transition: 2s ease;
 }
 
 .square:hover {
   /* fade effect */
+  scale: 110%;
+  border-radius: 4px;
   transition-duration: 0s;
 }
